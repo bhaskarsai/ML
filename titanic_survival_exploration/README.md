@@ -2,6 +2,9 @@
 ## Introduction and Foundations
 ## Project: Titanic Survival Exploration
 
+
+##PREVIEW LINK: http://htmlpreview.github.io/?https://github.com/bhaskarsai/ML/blob/master/titanic_survival_exploration/titanic_survival_exploration.html
+
 ### Install
 
 This project requires **Python 2.7** and the following Python libraries installed:
