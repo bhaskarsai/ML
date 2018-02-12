@@ -11782,7 +11782,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11837,7 +11837,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -11964,7 +11964,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
@@ -12048,11 +12048,11 @@ div#notebook {
 
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xebd4080&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe604f98&gt;</pre>
 </div>
 
 </div>
@@ -12388,7 +12388,7 @@ b) Excludes Frozen column as Missing mean value for frozen for this question.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Refs: http://scikit-learn.org/0.16/modules/generated/sklearn.cross_validation.train_test_split.html</span>
@@ -12478,7 +12478,7 @@ b) Excludes Frozen column as Missing mean value for frozen for this question.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -13998,7 +13998,7 @@ tT8P7PXp580AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Ref: https://seaborn.pydata.org/generated/seaborn.heatmap.html?highlight=heatmap#seaborn.heatmap</span>
@@ -14725,7 +14725,7 @@ Fresh and Detergents_Paper: A linear correlation, negatively correlated with a c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -18258,7 +18258,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -18349,10 +18349,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="n">outliers_all</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># For each feature find the data points with extreme high or low values</span>
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">log_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     
     <span class="c1"># TODO: Calculate Q1 (25th percentile of the data) for the given feature</span>
@@ -18369,16 +18373,28 @@ Once you have performed this implementation, the dataset will be stored in the v
     
     <span class="c1"># Display the outliers</span>
     <span class="k">print</span> <span class="s2">&quot;Data points considered outliers for the feature &#39;{}&#39;:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))])</span>
+    
+    <span class="n">feature_outliers</span> <span class="o">=</span> <span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))]</span>
+    <span class="n">outliers_all</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">feature_outliers</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+    
+    <span class="n">display</span><span class="p">(</span><span class="n">feature_outliers</span><span class="p">)</span>
+    
+
+    <span class="c1">#display(log_data[~((log_data[feature] &gt;= Q1 - step) &amp; (log_data[feature] &lt;= Q3 + step))])</span>
+    
+    
+    <span class="c1"># multiple feature outliers</span>
+    <span class="n">outliers_mult</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">outliers_all</span><span class="p">)</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
     
 <span class="c1"># OPTIONAL: Select the indices for data points you wish to remove</span>
 <span class="c1">#**REVIEW UPDATE: ADDED OUTLIE **</span>
-<span class="n">outliers_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))]</span>
-<span class="n">outliers</span>  <span class="o">=</span> <span class="n">outliers_data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_values</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;outliers for more than one feature :&quot;</span><span class="p">,</span> <span class="n">outliers</span><span class="p">,</span> <span class="s2">&quot; Total number of outliers :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">)</span>
+<span class="c1">#outliers_data = log_data[~((log_data[feature] &gt;= Q1 - step) &amp; (log_data[feature] &lt;= Q3 + step))]</span>
+<span class="c1">#outliers  = outliers_data.index.get_values()</span>
+<span class="c1">#print &quot;outliers for more than one feature :&quot;, outliers, &quot; Total number of outliers :&quot;, len(outliers)</span>
 
 <span class="c1"># Remove the outliers, if any were specified</span>
-<span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="c1">#good_data = log_data.drop(log_data.index[outliers]).reset_index(drop = True)</span>
+<span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers_mult</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -19011,13 +19027,6 @@ Data points considered outliers for the feature &#39;Delicatessen&#39;:
 </div>
 </div>
 
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>outliers for more than one feature : [ 66 109 128 137 142 154 183 184 187 203 233 285 289 343]  Total number of outliers : 14
-</pre>
-</div>
 </div>
 
 </div>
