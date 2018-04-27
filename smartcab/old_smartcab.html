@@ -33756,20 +33756,6 @@ d) State "('red', 'forward', None, None)"; action:left; policy:incorrect</p>
 -- right : 2.27
 -- None : 0.39
 -- left : -4.69</p>
-<p>START: Feedback Update: Adding details as requested by the udacity reviewer:
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = = =</p>
-<p>RED LIGHT SCENARIO:
-= = = = = = = = = = =
-i) If the light is RED and the waypoint is RIGHT, the agent should neither turn left nor forward but can turn right as per US motor vehicle laws. In this scenario, LEFT, NONE AND FWARD all stay at 0, however RIGHT action should contain positive value.</p>
-<p>ii) If the light is RED and the waypoint is FORWARD, the agent should neither turn left nor forward but can turn right as per US motor vehicle laws. In this scenario, LEFT, NONE AND FWARD all stay at 0, however RIGHT action should contain positive value.</p>
-<p>iiI) If the light is red and the waypoint is LEFT, the agent should neither turn left nor forward but can turn right as per US motor vehicle laws. In this scenario, LEFT, NONE AND FWARD all stay at 0, however RIGHT action should contain positive value.</p>
-<p>GREEN LIGHT SCENARIO:
-= = = = = = = = = = =
-iv) If the light is GREEN and the way point is FORWARD, the agent can move either left, right or forward direction.  however FORWARD direction should have highest learning value compare to both left or right.</p>
-<p>vI) If the light is GREEN and the way point is LEFT, the agent can either move LEFT or FORWARD or RIGHT. In this scenario, the LEFT action value should be more than the forward and right values</p>
-<p>vII) If the light is GREEN and the way point is RIGHT, the agent can move RIGHT or FORWARD or LEFT. In this scenario, the RIGHT action value should be more than the forward and left</p>
-<p>END: Feedback Update: Adding details as requested by the udacity reviewer:
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = = =</p>
 <p>Following policy didn't performed as it is supposed (followed suboptimal), as the action indicates, it supposed to move in forward direction, however Left is carrying the highest value on Green light.</p>
 <p>('forward', ('green', None, 'right', None))
  -- forward : 0.27
